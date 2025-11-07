@@ -23,13 +23,15 @@ const config: Config = {
         primary: "hsl(var(--primary) / <alpha-value>)",
         "primary-foreground": "hsl(var(--primary-foreground) / <alpha-value>)",
         secondary: "hsl(var(--secondary) / <alpha-value>)",
-        "secondary-foreground": "hsl(var(--secondary-foreground) / <alpha-value>)",
+        "secondary-foreground":
+          "hsl(var(--secondary-foreground) / <alpha-value>)",
         muted: "hsl(var(--muted) / <alpha-value>)",
         "muted-foreground": "hsl(var(--muted-foreground) / <alpha-value>)",
         accent: "hsl(var(--accent) / <alpha-value>)",
         "accent-foreground": "hsl(var(--accent-foreground) / <alpha-value>)",
         destructive: "hsl(var(--destructive) / <alpha-value>)",
-        "destructive-foreground": "hsl(var(--destructive-foreground) / <alpha-value>)",
+        "destructive-foreground":
+          "hsl(var(--destructive-foreground) / <alpha-value>)",
         input: "hsl(var(--input) / <alpha-value>)",
         ring: "hsl(var(--ring) / <alpha-value>)",
       },
