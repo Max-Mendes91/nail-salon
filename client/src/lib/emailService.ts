@@ -109,12 +109,12 @@ export const sendBookingEmail = async (
   }
 };
 
-// Validate phone number format
+// Validate phone number format - exactly 10 digits
 export const validatePhone = (phone: string): boolean => {
-  // Allow various phone formats: (555) 123-4567, 555-123-4567, 5551234567, etc.
-  const phoneRegex = /^[\d\s\-\(\)]+$/;
+  // Remove all non-digit characters
   const digitsOnly = phone.replace(/\D/g, '');
-  return phoneRegex.test(phone) && digitsOnly.length >= 10 && digitsOnly.length <= 15;
+  // Must be exactly 10 digits
+  return digitsOnly.length === 10;
 };
 
 // Validate email format
@@ -131,12 +131,13 @@ export const validateFutureDate = (date: string): boolean => {
   return selectedDate >= today;
 };
 
-// Format phone number for display
+// Format phone number for display - Polish format +48 XXX XXX XXX
 export const formatPhoneNumber = (phone: string): string => {
   const digitsOnly = phone.replace(/\D/g, '');
 
   if (digitsOnly.length === 10) {
-    return `(${digitsOnly.slice(0, 3)}) ${digitsOnly.slice(3, 6)}-${digitsOnly.slice(6)}`;
+    // Format as +48 XXX XXX XXX
+    return `+48 ${digitsOnly.slice(0, 3)} ${digitsOnly.slice(3, 6)} ${digitsOnly.slice(6)}`;
   }
 
   return phone;
