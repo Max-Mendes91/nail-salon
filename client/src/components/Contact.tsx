@@ -88,10 +88,19 @@ export default function Contact() {
           data-testid="card-map"
         >
           <CardContent className="p-0">
-            <div className="w-full h-80 bg-muted flex items-center justify-center">
-              <p className="text-muted-foreground">
-                Map integration placeholder
-              </p>
+            <div className="w-full h-80 relative">
+              {/* Google Maps Embed - Business owners should replace the src URL with their own Google Maps embed link */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.8619633456246!2d-118.40292492346447!3d34.07357177315567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6d147ab%3A0x4f8b067b88c9d801!2sBeverly%20Hills%2C%20CA%2090210!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Polished & Posh Location"
+                className="absolute inset-0"
+              ></iframe>
             </div>
           </CardContent>
         </Card>
