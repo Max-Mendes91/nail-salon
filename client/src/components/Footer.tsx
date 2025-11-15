@@ -1,4 +1,5 @@
 import { SiInstagram, SiFacebook, SiTiktok } from "react-icons/si";
+import { Link } from "wouter";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -110,6 +111,14 @@ export default function Footer() {
 
         <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
           <p>&copy; {currentYear} Polished & Posh. All rights reserved.</p>
+          <div className="flex justify-center gap-6 mt-4">
+            <Link href="/privacy" className="hover:text-primary transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="hover:text-primary transition-colors">
+              Terms of Service
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
