@@ -26,7 +26,7 @@ export default function ScrollLines() {
         style={{
           left: `${line1X}%`,
           transform: `translateY(${scrollY * 0.3}px)`,
-          opacity: 0.6
+          opacity: 0.8
         }}
       />
       <div
@@ -34,7 +34,7 @@ export default function ScrollLines() {
         style={{
           left: `${line2X}%`,
           transform: `translateY(${scrollY * 0.4}px)`,
-          opacity: 0.5
+          opacity: 0.75
         }}
       />
       <div
@@ -42,7 +42,7 @@ export default function ScrollLines() {
         style={{
           left: `${line3X}%`,
           transform: `translateY(${scrollY * 0.25}px)`,
-          opacity: 0.4
+          opacity: 0.7
         }}
       />
       <div
@@ -50,7 +50,7 @@ export default function ScrollLines() {
         style={{
           left: `${line4X}%`,
           transform: `translateY(${scrollY * 0.35}px)`,
-          opacity: 0.3
+          opacity: 0.65
         }}
       />
     </div>
