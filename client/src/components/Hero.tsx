@@ -36,11 +36,8 @@ export default function Hero() {
           transform: `translateY(${scrollY * 0.5}px)`,
         }}
       >
-        {/* Gradient Overlay with Animation */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-black/60 to-pink-900/80" />
-
-        {/* Radial Gradient Accent */}
-        <div className="absolute inset-0 gradient-radial opacity-30" />
+        {/* Subtle Dark Overlay - Less Purple, More Image */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-purple-900/25" />
       </div>
 
       {/* Floating Decorative Elements */}

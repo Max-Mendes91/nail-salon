@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Calendar, Clock, Mail, Phone, User, AlertCircle, Sparkles } from "lucide-react";
 import { trackBookingSubmit } from "@/lib/analytics";
+import SectionDivider from "./SectionDivider";
 import {
   sendBookingEmail,
   validatePhone,
@@ -236,8 +237,8 @@ export default function Booking() {
       className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-secondary/30 to-background relative"
       data-testid="section-booking"
     >
-      {/* Decorative Top Divider */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      {/* Beautiful Wave Divider Top */}
+      <SectionDivider position="top" flip />
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
@@ -465,8 +466,8 @@ export default function Booking() {
         </div>
       </div>
 
-      {/* Decorative Bottom Divider */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      {/* Beautiful Wave Divider Bottom */}
+      <SectionDivider position="bottom" />
     </section>
   );
 }

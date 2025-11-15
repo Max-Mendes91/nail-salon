@@ -1,14 +1,17 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 import { SiInstagram } from "react-icons/si";
+import SectionDivider from "./SectionDivider";
 
 export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-16 md:py-20 lg:py-24 bg-secondary/30"
+      className="py-16 md:py-20 lg:py-24 bg-secondary/30 relative"
       data-testid="section-contact"
     >
+      {/* Beautiful Wave Divider Top */}
+      <SectionDivider position="top" flip />
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2
