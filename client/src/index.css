@@ -14,7 +14,7 @@
   --elevate-1: rgba(0, 0, 0, 0.03);
   --elevate-2: rgba(0, 0, 0, 0.08);
 
-  --background: 30 25% 98%;
+  --background: 28 15% 86%; /* Elegant warm taupe-gray background */
 
   --foreground: 280 8% 18%;
 
@@ -538,4 +538,97 @@
   .stagger-4 { animation-delay: 0.4s; }
   .stagger-5 { animation-delay: 0.5s; }
   .stagger-6 { animation-delay: 0.6s; }
+
+  /* Scroll-Following Decorative Lines */
+  .scroll-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .scroll-line {
+    position: absolute;
+    width: 2px;
+    height: 100vh;
+    background: linear-gradient(180deg, transparent, hsl(var(--primary) / 0.35), transparent);
+    transition: transform 0.1s ease-out;
+  }
+
+  /* Beautiful Section Dividers */
+  .section-divider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 80px;
+    overflow: hidden;
+  }
+
+  .section-divider-top {
+    top: 0;
+    transform: translateY(-50%);
+  }
+
+  .section-divider-bottom {
+    bottom: 0;
+    transform: translateY(50%);
+  }
+
+  .section-divider svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Wave Divider Animation */
+  @keyframes wave {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .wave-animate {
+    animation: wave 20s linear infinite;
+  }
+
+  /* Curve Divider Styles */
+  .divider-curve-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .divider-curve-top svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+  }
+
+  .divider-curve-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .divider-curve-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+  }
 }

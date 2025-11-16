@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, Brush, Palette, Hand } from "lucide-react";
+import SectionDivider from "./SectionDivider";
 
 const services = [
   {
@@ -43,8 +44,8 @@ export default function Services() {
       className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-background to-secondary/30 relative"
       data-testid="section-services"
     >
-      {/* Decorative Top Divider */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      {/* Beautiful Wave Divider Top */}
+      <SectionDivider position="top" />
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
@@ -98,8 +99,8 @@ export default function Services() {
         </div>
       </div>
 
-      {/* Decorative Bottom Divider */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      {/* Beautiful Wave Divider Bottom */}
+      <SectionDivider position="bottom" flip />
     </section>
   );
 }

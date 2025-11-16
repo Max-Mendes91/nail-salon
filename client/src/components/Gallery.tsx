@@ -1,4 +1,4 @@
-import React from "react";
+import SectionDivider from "./SectionDivider";
 
 const galleryImages = [
   {
@@ -39,26 +39,35 @@ const galleryImages = [
   },
 ];
 
-const Gallery: React.FC = () => {
+export default function Gallery() {
   return (
-    <section id="gallery" className="py-20 bg-gray-100">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Gallery</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="gallery" className="py-16 md:py-20 lg:py-24 bg-background relative">
+      {/* Beautiful Wave Divider Top */}
+      <SectionDivider position="top" />
+
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-primary text-center mb-16 animate-fade-in-up">
+          Gallery
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {galleryImages.map((image, index) => (
-            <div key={index} className="overflow-hidden rounded-lg shadow-lg">
+            <div
+              key={index}
+              className={`overflow-hidden rounded-lg shadow-lg hover-lift hover-shine animate-fade-in-up stagger-${Math.min(index + 1, 6)}`}
+            >
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-cover hover-scale transition-transform duration-500"
                 loading="lazy"
               />
             </div>
           ))}
         </div>
       </div>
+
+      {/* Beautiful Wave Divider Bottom */}
+      <SectionDivider position="bottom" />
     </section>
   );
-};
-
-export default Gallery;
+}
