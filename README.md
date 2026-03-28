@@ -154,7 +154,6 @@ nail-salon/
 ├── vercel.json                  # Vercel deployment config
 ├── CUSTOMIZATION.md             # Business owner guide
 ├── DEPLOYMENT.md                # Deployment guide
-├── .env.example                 # Environment variables template
 └── README.md                    # This file
 ```
 
