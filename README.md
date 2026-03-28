@@ -44,7 +44,7 @@ A modern, production-ready website template for nail salons and beauty businesse
 ### Prerequisites
 
 - Node.js 18+ (LTS recommended)
-- npm or pnpm
+- npm
 
 ### Installation
 
@@ -94,12 +94,8 @@ See **[CUSTOMIZATION.md](./CUSTOMIZATION.md)** for a step-by-step guide to:
 
 ### For Developers
 
-See **[TECHNICAL.md](./design_guidelines.md)** for:
-- Component architecture
-- Styling system
-- State management
-- API integration
-- Testing strategy
+See component source files in `client/src/components/` for architecture details.
+Color system and theme variables are in `client/src/index.css`.
 
 ## 📤 Deployment
 
@@ -132,7 +128,7 @@ nail-salon/
 │   │   └── sitemap.xml          # SEO sitemap
 │   ├── src/
 │   │   ├── components/          # React components
-│   │   │   ├── ui/              # Reusable UI components (50+)
+│   │   │   ├── ui/              # Reusable UI components (button, card, input, label, textarea, toast, tooltip)
 │   │   │   ├── Header.tsx       # Navigation header
 │   │   │   ├── Hero.tsx         # Landing section
 │   │   │   ├── Services.tsx     # Services display
@@ -158,6 +154,7 @@ nail-salon/
 ├── vercel.json                  # Vercel deployment config
 ├── CUSTOMIZATION.md             # Business owner guide
 ├── DEPLOYMENT.md                # Deployment guide
+├── .env.example                 # Environment variables template
 └── README.md                    # This file
 ```
 
@@ -257,7 +254,6 @@ npm run dev          # Restart dev server
 ### Documentation
 - [Customization Guide](./CUSTOMIZATION.md) - For business owners
 - [Deployment Guide](./DEPLOYMENT.md) - Deploy to production
-- [Design Guidelines](./design_guidelines.md) - Technical details
 
 ### External Resources
 - [React Documentation](https://react.dev/)
